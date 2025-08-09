@@ -9,7 +9,7 @@ public class AppController {
 	@GetMapping("/demo1")
 	@ResponseBody
 	public String fun1() {
-		return " Sun of two numbers is 50";
+		return " Sun of two numbers is 25";
 	}
 
 }
