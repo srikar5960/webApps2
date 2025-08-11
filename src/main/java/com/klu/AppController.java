@@ -1,15 +1,20 @@
+
 package com.klu;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+
+@CrossOrigin
 public class AppController {
-	@GetMapping("/demo1")
-	@ResponseBody
-	public String fun1() {
-		return " Sun of two numbers is 25";
+	
+	@GetMapping("/add/{a}/{b}")
+	public String add(@PathVariable("a") int a, @PathVariable("b") int b) {
+		
+		return "Addition of two numbers are:"+ (a+b);
 	}
 
 }
