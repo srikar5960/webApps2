@@ -4,12 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
+@RestController
 public class AppController {
-	public String fun1() {
-		return " Sun of two numbers is 25";
-	}
-
+    
+    @GetMapping("/demo1")
+    public String fun1() {
+        return "Sum of two numbers is 25";
+    }
 }
-
 
