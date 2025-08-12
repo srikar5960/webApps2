@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class AppController {
 	
-	@GetMapping("/add/{a}/{b}")
+	@GetMapping("app2/add/{a}/{b}")
 	public String add(@PathVariable("a") int a, @PathVariable("b") int b) {
 		
 		return "Addition of two numbers are:"+ (a+b);
