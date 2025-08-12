@@ -1,17 +1,38 @@
+// package com.klu;
+
+// import org.springframework.web.bind.annotation.CrossOrigin;
+// import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.RestController;
+
+// @RestController
+
+    
+// @CrossOrigin
+// public class AppController {
+    
+//     @GetMapping("/demo1")
+//     public String fun1() {
+//         return "Sum of two numbers is 25";
+//     }
+// }
+
+
 package com.klu;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
-    
 @CrossOrigin
 public class AppController {
-    
-    @GetMapping("/demo1")
-    public String fun1() {
-        return "Sum of two numbers is 25";
-    }
+	
+	@GetMapping("/add/{a}/{b}")
+	public String add(@PathVariable("a") int a, @PathVariable("b") int b) {
+		
+		return "Addition of two numbers are:"+ (a+b);
+	}
+
 }
